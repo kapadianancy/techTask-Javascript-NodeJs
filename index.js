@@ -1,16 +1,24 @@
 const express = require("express");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 const port = process.env.PORT || 8080;
-const newsRoute = require("./routes/newsRoute");
-const weatherRoute = require("./routes/weatherRoute");
+const routes = require("./routes");
+const bodyParser = require("body-parser");
+require("./config/db.config");
 
-app.use("/news", newsRoute);
-app.use("/weather", weatherRoute);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(routes);
 
 app.use("/*", (req, res) => {
-  res.status(404).send("Url Not Found");
+  res.status(404).send({ error: "Url Not Found" });
 });
 
-app.listen(port, () => {
-  console.log(`server running at ${port}`);
-});
+if (process.env.ENV !== "test") {
+  app.listen(port, () => {
+    console.log(`server running at ${port}`);
+  });
+} else {
+  module.exports = app;
+}

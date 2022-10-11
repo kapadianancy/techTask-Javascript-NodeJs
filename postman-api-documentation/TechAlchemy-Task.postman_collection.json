@@ -1,0 +1,559 @@
+{
+	"info": {
+		"_postman_id": "106bca51-9375-437f-87d1-38c447f1ac6a",
+		"name": "TechAlchemy-Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13515876"
+	},
+	"item": [
+		{
+			"name": "News API",
+			"item": [
+				{
+					"name": "get news data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/news?search=ndtv",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"news"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ndtv"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/news?search=ndtv",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"news"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "ndtv"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-A/gpBI1XFF4Fcx7JHBD39zMUdOI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 Oct 2022 10:56:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Not Authenticated\"\n}"
+						},
+						{
+							"name": "get news data with search keyword",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/news?search=ndtv",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"news"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "ndtv"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1844"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"734-pMVzu5KNl7FCeiLPCxc5XEFNg5o\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 Oct 2022 10:57:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 8,\n    \"data\": [\n        {\n            \"headline\": \"Serious Debt Crisis Unfolding Across Developing Nations: Report - NDTV Profit\",\n            \"link\": \"https://www.ndtv.com/business/serious-debt-crisis-unfolding-across-developing-countries-undp-3420805\"\n        },\n        {\n            \"headline\": \"Mulayam Singh Yadav's State Funeral Today At His Native Saifai In UP - NDTV\",\n            \"link\": \"https://www.ndtv.com/india-news/mulayam-singh-yadavs-body-arrives-at-his-native-village-cremation-today-3419826\"\n        },\n        {\n            \"headline\": \"Cops At Ex Delhi Minister's Home With Summons Amid Religious Event Row - NDTV\",\n            \"link\": \"https://www.ndtv.com/india-news/delhi-police-at-former-delhi-minister-rajendra-pal-gautams-home-summon-him-for-questioning-today-amid-religious-conversion-event-row-3420529\"\n        },\n        {\n            \"headline\": \"500 Pilot Whales Die In New Zealand, Shark Attack Risk Rules Out Rescue - NDTV\",\n            \"link\": \"https://www.ndtv.com/world-news/500-pilot-whales-die-in-new-zealand-shark-attack-risk-rules-out-rescue-3420460\"\n        },\n        {\n            \"headline\": \"Roger Binny Likely To Succeed Sourav Ganguly As BCCI President: Sources - NDTV Sports\",\n            \"link\": \"https://sports.ndtv.com/cricket/roger-binny-likely-to-succeed-sourav-ganguly-as-bcci-president-sources-3420449\"\n        },\n        {\n            \"headline\": \"BJP MLA Says \\\"Misinterpreted\\\" Amid Videos Of Alleged Delhi Riots Remarks - NDTV\",\n            \"link\": \"https://www.ndtv.com/india-news/bjp-mla-nand-kishor-gurjar-says-misinterpreted-amid-videos-of-alleged-delhi-riots-remarks-3419657\"\n        },\n        {\n            \"headline\": \"PM's Birthday Note For \\\"Remarkable Film Personality\\\" Amitabh Bachchan - NDTV\",\n            \"link\": \"https://www.ndtv.com/india-news/pms-birthday-note-for-remarkable-film-personality-amitabh-bachchan-3420318\"\n        },\n        {\n            \"headline\": \"Russia Fired 84 Missiles, 14 Dead, Says Ukraine; \\\"Massive Strike,\\\" Says Putin: 10 Points - NDTV\",\n            \"link\": \"https://www.ndtv.com/world-news/russia-fired-84-missiles-10-dead-says-ukraine-massive-strike-says-vladimir-putin-10-points-3419091\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "get news data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/news",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"news"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4990"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"137e-4/0kOqy01GcIPN9eOsp0Ef6dAAQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 Oct 2022 10:57:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 38,\n    \"data\": [\n        {\n            \"headline\": \"Underlying health issues linked to poor outcomes after fracture in older adults: Study - The Tribune India\",\n            \"link\": \"https://www.tribuneindia.com/news/health/underlying-health-issues-linked-to-poor-outcomes-after-fracture-in-older-adults-study-440276\"\n        },\n        {\n            \"headline\": \"Overuse of Steroids by Covid Patients during Pandemic Triggers Destruction of Hip Joint - NewsPatrolling\",\n            \"link\": \"https://newspatrolling.com/overuse-of-steroids-by-covid-patients-during-pandemic-triggers-destruction-of-hip-joint/\"\n        },\n        {\n            \"headline\": \"Next iPhone SE could come with 6.1-inch display and notch, says report - The Indian Express\",\n            \"link\": \"https://indianexpress.com/article/technology/mobile-tabs/next-iphone-se-could-come-with-6-1-inch-display-and-notch-says-report-8202198/\"\n        },\n        {\n            \"headline\": \"Amazon Great Indian Festival Sale: Get up to 58% off on US POLO garments for men - Hindustan Times\",\n            \"link\": \"https://www.hindustantimes.com/shop-now/fashion/amazon-great-indian-festival-sale-get-up-to-58-off-on-us-polo-garments-for-men-101665469653845.html\"\n        },\n        {\n            \"headline\": \"Super-Earth hiding around dwarf sun becomes favourite for habitability - India Today\",\n            \"link\": \"https://www.indiatoday.in/science/story/super-earth-hiding-around-dwarf-sun-becomes-favourite-for-habitability-2283871-2022-10-11\"\n        },\n        {\n            \"headline\": \"Flipkart Big Diwali sale: Offer on smartphones under ₹30,000 | Mint - Mint\",\n            \"link\": \"https://www.livemint.com/technology/gadgets/flipkart-big-diwali-sale-offer-on-smartphones-under-rs-30000-11665473486312.html\"\n        },\n        {\n            \"headline\": \"Serious Debt Crisis Unfolding Across Developing Nations: Report - NDTV Profit\",\n            \"link\": \"https://www.ndtv.com/business/serious-debt-crisis-unfolding-across-developing-countries-undp-3420805\"\n        },\n        {\n            \"headline\": \"IND vs SA Dream11 Prediction, Fantasy Cricket Tips, Dream11 Team, Playing XI, Pitch Report, Injury Update- South Africa Tour of India, 3rd ODI - Cricket Addictor\",\n            \"link\": \"https://cricketaddictor.com/fantasy-cricket/ind-vs-sa-dream11-prediction-fantasy-cricket-tips-dream11-team-playing-xi-pitch-report-injury-update-south-africa-tour-of-india-3rd-odi/\"\n        },\n        {\n            \"headline\": \"Mulayam Singh Yadav's State Funeral Today At His Native Saifai In UP - NDTV\",\n            \"link\": \"https://www.ndtv.com/india-news/mulayam-singh-yadavs-body-arrives-at-his-native-village-cremation-today-3419826\"\n        },\n        {\n            \"headline\": \"Cops At Ex Delhi Minister's Home With Summons Amid Religious Event Row - NDTV\",\n            \"link\": \"https://www.ndtv.com/india-news/delhi-police-at-former-delhi-minister-rajendra-pal-gautams-home-summon-him-for-questioning-today-amid-religious-conversion-event-row-3420529\"\n        },\n        {\n            \"headline\": \"NASA’s Hubble Telescope Discovers A 4 Million Year Old Giant Bubble Nebula. - Jagran Josh\",\n            \"link\": \"https://www.jagranjosh.com/general-knowledge/nasas-hubble-telescope-discovers-a-4-million-year-old-giant-bubble-nebula-1665470544-1\"\n        },\n        {\n            \"headline\": \"Chief Justice U U Lalit recommends Justice DY Chandrachud as his successor - The Indian Express\",\n            \"link\": \"https://indianexpress.com/article/india/cji-uu-lalit-to-recommend-d-y-chandrachud-successor-8201663/\"\n        },\n        {\n            \"headline\": \"Thailand qualify for Women's Asia Cup semi-finals for the first time - ESPNcricinfo\",\n            \"link\": \"https://www.espncricinfo.com/story/thailand-qualify-for-women-s-asia-cup-semi-finals-for-the-first-time-1339431\"\n        },\n        {\n            \"headline\": \"Study reveals how unprecedented level of insects harming plants - Telangana Today\",\n            \"link\": \"https://telanganatoday.com/study-reveals-how-unprecedented-level-of-insects-harming-plants\"\n        },\n        {\n            \"headline\": \"500 Pilot Whales Die In New Zealand, Shark Attack Risk Rules Out Rescue - NDTV\",\n            \"link\": \"https://www.ndtv.com/world-news/500-pilot-whales-die-in-new-zealand-shark-attack-risk-rules-out-rescue-3420460\"\n        },\n        {\n            \"headline\": \"iPhone 14 bugs unbearable? Apple releases new iOS 16 update to fix - HT Tech\",\n            \"link\": \"https://tech.hindustantimes.com/tech/news/iphone-14-bugs-unbearable-apple-releases-new-ios-16-update-to-fix-71665468971833.html\"\n        },\n        {\n            \"headline\": \"Ukraine-Russia War LIVE Updates: India Votes Against Moscow's 'Secret Ballot' on Ukraine Draft Resolution i - News18\",\n            \"link\": \"https://www.news18.com/news/world/ukraine-russia-war-live-updates-missile-strike-death-un-us-zelensky-putin-conflict-news-livenews-6138949.html\"\n        },\n        {\n            \"headline\": \"New Zealand Tri-Series 2022: NZ vs PAK Match Prediction – Who will win today’s match? - CricTracker\",\n            \"link\": \"https://www.crictracker.com/cricket-match-predictions/new-zealand-tri-series-2022-nz-vs-pak-match-prediction-who-will-win-todays-match/\"\n        },\n        {\n            \"headline\": \"Jaya Bachchan cheers up emotional Amitabh Bachchan on KBC 14, offers him sweets - Hindustan Times\",\n            \"link\": \"https://www.hindustantimes.com/entertainment/tv/kbc-jaya-bachchan-cheers-up-an-emotional-amitabh-bachchan-offers-him-sweet-dish-101665463757051.html\"\n        },\n        {\n            \"headline\": \"Eknath Shinde faction submits these 3 choices for symbol to Election Commission - Hindustan Times\",\n            \"link\": \"https://www.hindustantimes.com/india-news/eknath-shinde-faction-submits-these-3-choices-for-symbol-to-election-commission-101665465893099.html\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Weather API",
+			"item": [
+				{
+					"name": "get weather data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/weather",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get weather data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/weather",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"weather"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "331"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14b-QQ3bHP1+4NCcBBDrp0X3fqjuQ50\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 Oct 2022 10:57:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 5,\n    \"unit\": \"metric\",\n    \"location\": \"Surat\",\n    \"data\": [\n        {\n            \"date\": \"Tue Oct 11 2022\",\n            \"main\": \"Clouds\",\n            \"temp\": 31.94\n        },\n        {\n            \"date\": \"Tue Oct 11 2022\",\n            \"main\": \"Clouds\",\n            \"temp\": 30.47\n        },\n        {\n            \"date\": \"Tue Oct 11 2022\",\n            \"main\": \"Clouds\",\n            \"temp\": 28.83\n        },\n        {\n            \"date\": \"Tue Oct 11 2022\",\n            \"main\": \"Rain\",\n            \"temp\": 26.66\n        },\n        {\n            \"date\": \"Wed Oct 12 2022\",\n            \"main\": \"Rain\",\n            \"temp\": 26.29\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth API",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"nancy\",\r\n    \"email\":\"nancy@gmail.com\",\r\n    \"password\":\"nancy21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"nancy\",\r\n    \"email\":\"nancy@gmail.com\",\r\n    \"password\":\"nancy21\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/auth/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"33-uil3QxBUtg0/KFPcCYBhOQVdnAk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 Oct 2022 10:55:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"name\": \"nancy\",\n        \"email\": \"nancy@gmail.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nancy@gmail.com\",\r\n    \"password\":\"nancy21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"nancy@gmail.com\",\r\n    \"password\":\"nancy21\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d3-5t+5xC1wS0TALjMmglRZSAMQsLM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 11 Oct 2022 10:56:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"email\": \"nancy@gmail.com\",\n        \"name\": \"nancy\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQ1NGJiZWQxOGUwYmE2OWMwZWMyOWEiLCJpYXQiOjE2NjU0ODU3ODF9.1nHH3AOpJSj0zsN9k50zgSdvNWJz1Xw3A3KlnzfDjvw\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/auth/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQ1MjQ2YTQzNGNmNWVhNzk4MjEyZTYiLCJpYXQiOjE2NjU0ODQzODF9.1_lXSc0MSFxUyQxdhBJAC0e-vMNCcT45dp1GGZG4nV8",
+			"type": "string"
+		}
+	]
+}
