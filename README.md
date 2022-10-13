@@ -1,5 +1,11 @@
 # techTask-Javascript-NodeJs
 
+## TASK-1 ##
+
+- Location of Pseudocode for sorting 10GB of integer data with 1GB of RAM : ``` Task-1/sorting.txt ``` || ```https://github.com/kapadianancy/techTask-Javascript-NodeJs/blob/main/Task-1/sorting.txt```
+
+
+
 ## TASK-2 ##
 
 ***About***
