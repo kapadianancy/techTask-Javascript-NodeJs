@@ -1,0 +1,19 @@
+Task - 1 - Pseudocode for sort 10GB of integer data with 1GB of RAM.
+
+The solution is : External Sorting
+
+All the integer data can not be sorted at once as the data size is much larger than the size of the memory.
+So the idea is to devide the entire array into chunks of much smaller size that can be easily supported by RAM size.
+now sort the individual chunks and then merge them into one single output.
+
+-------------------------------------------------------------------------------------------------
+
+1 - Read input file in chunks such that at most 'available RAM size' elements are read at a time.
+
+2 - Sort the chunk using any sorting methods such as quick-sort or merge-sort.
+
+3 - Write the sorted array in a file.
+
+3 - Repeat the above 3 steps until EOF and all the integer elements are sorted and stored on disk.
+
+4 - Load the sorted files one by one as needed and Merge them using the "merge k sorted arrays"
